@@ -1,10 +1,11 @@
 <script>
-	let user_account = null;
+	export let user_account = '';
 
-	// Connect MetaMask Wallet
+	// Connect MetaMask Wallet and get ethereum account address
 	async function connect_wallet_handler() {
-		if (window.ethereum) {
-			const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+		// Note: window.ethereum is injected by MetaMask
+		if (window['ethereum']) {
+			const accounts = await window['ethereum'].request({ method: 'eth_requestAccounts' });
 			if (accounts.length > 0) {
 				user_account = accounts[0];
 			} else {
