@@ -1,8 +1,8 @@
 <script>
+	import '../theme.postcss';
 	import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 	import '@skeletonlabs/skeleton/styles/all.css';
-	import '../theme.postcss';
-	import '../app.css';
+	import '../app.postcss';
 </script>
 
 <slot />
